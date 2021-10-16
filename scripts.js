@@ -40,11 +40,17 @@ function CompleteTask(index) {
     ArrayOfTasks[index].status = !ArrayOfTasks[index].status
     ShowTasks()
 }
-
 function ReloadTasks() {
     let MyTasks = localStorage.getItem("list")
     ArrayOfTasks = JSON.parse(MyTasks)
-    ShowTasks()
+   
+    if (ArrayOfTasks == null) {
+        ArrayOfTasks = [{tarefa: 'Seja bem vindo', status: false}]
+        ShowTasks()
+    
+    } else{
+        ShowTasks()
+    }
 }
 
 button.addEventListener("click", AddTask)
