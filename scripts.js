@@ -34,6 +34,7 @@ function AddTask() {
         status: false
     })
     ShowTasks()
+    input.value = ""
 }
 
 function CompleteTask(index) {
@@ -54,3 +55,7 @@ function ReloadTasks() {
 }
 
 button.addEventListener("click", AddTask)
+
+document.addEventListener('keydown', function(e){
+    if (e.key == "Enter") { AddTask() }
+});
