@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none; 
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, #7F00FF 0%, #E100FF 100%);
+
+}
+
+#button-add {
+    background: #8052EC;
+    color: white;
+    font-size: 17px;
+    height: 40px;
+    width: 130px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+}
+
+#button-add:hover {
+    opacity: 0.8;
+}
+
+#button-add:active {
+    opacity: 0.6;
+}
+
+.container {
+    width: 541px;
+    background: #FFFFFF;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-top: 125px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 20px;
+}
+
+#main-input {
+    width: 342px;
+    height: 40px;
+    border: 2px solid rgba(209, 211, 212, 0.4);
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+#tasks { 
+    width: 100%;
+    list-style: none;
+    margin-top: 60px;
+}
+
+.task-item {
+    background: #F2F2F2;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px 45px;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+}
+
+.task-name {
+    color: black;
+    font-size: 15px;
+}
+
+.trash {
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 40px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fa-trash {
+    color: red;
+}
+
+.rocket-button {
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 40px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fa-rocket {
+    color: rgba(79, 15, 197, 1);
+
+}
+
+.task-item:hover .trash {
+    opacity: 1;
+}
+
+.task-item:hover .rocket-button {
+    opacity: 1;
+}
+
+.concluded {
+    background-color: #d4f88d;
+    text-decoration: line-through;
+}
