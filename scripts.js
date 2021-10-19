@@ -29,10 +29,15 @@ function DeleteTask(index) {
 }
 
 function AddTask() {
-    ArrayOfTasks.push({
-        task: input.value,
-        status: false
-    })
+    if(input.value) {
+            ArrayOfTasks.push({
+            task: input.value,
+            status: false
+        })
+    }   
+    else {
+        alert("Digite uma tarefa")
+    }
     ShowTasks()
     input.value = ""
 }
