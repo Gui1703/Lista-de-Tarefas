@@ -41,16 +41,12 @@ function CompleteTask(index) {
     ArrayOfTasks[index].status = !ArrayOfTasks[index].status
     ShowTasks()
 }
+
 function ReloadTasks() {
     let MyTasks = localStorage.getItem("list")
+    if (MyTasks) {
     ArrayOfTasks = JSON.parse(MyTasks)
-   
-    if (ArrayOfTasks == null) {
-        ArrayOfTasks = [{tarefa: 'Seja bem vindo', status: false}]
-        ShowTasks()
-    
-    } else{
-        ShowTasks()
+    ShowTasks()
     }
 }
 
