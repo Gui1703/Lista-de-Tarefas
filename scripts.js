@@ -19,6 +19,7 @@ function ShowTasks() {
             </button>
         </li>`
     })
+    
     Fulllist.innerHTML = NewLi
     localStorage.setItem("list", JSON.stringify(ArrayOfTasks))
 }
